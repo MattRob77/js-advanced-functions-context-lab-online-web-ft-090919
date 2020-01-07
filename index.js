@@ -87,5 +87,5 @@ function calculatePayroll(empRecords) {
     let total = empRecords.reduce((acc, cv) => {
         return acc + allWagesFor.call(cv)
     }, 0 )
-    return total;
+    return total
 }
