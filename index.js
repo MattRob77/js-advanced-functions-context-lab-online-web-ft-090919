@@ -83,6 +83,10 @@ function findEmployeeByFirstName(collection, firstName) {
       return employee
 }
 
-function calculatePayroll() { 
-  
-} 
+function calculatePayroll(empRecords) {
+    let total = empRecords.reduce((acc, cv) => {
+        return acc + allWagesFor.call(cv);
+    }, 0 );
+
+    return total;
+}
